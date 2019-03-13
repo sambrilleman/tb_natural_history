@@ -1,4 +1,4 @@
-setwd('C:/Users/rrag0004/Models/tb_natural_history/')
+setwd('C:/GitHub/tb_natural_history')
 source('review_classes.R')
 
 analysis = Analysis$new()
