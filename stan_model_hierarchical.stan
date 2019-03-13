@@ -85,7 +85,7 @@ transformed parameters {
 model {
 
   // binomial likelihood (vectorised)
-  n_new_deaths ~ binomial_lpmf(n_at_risk, p);
+  n_new_deaths ~ binomial(n_at_risk, p);
 
   // distribution for cohort specific parameters (vectorised)
   mu_t  ~ lognormal(lambda_mu_t,  sigma_mu_t);

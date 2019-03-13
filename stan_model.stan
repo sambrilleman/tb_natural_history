@@ -75,7 +75,7 @@ transformed parameters {
 model {
 
   // binomial likelihood (vectorised)
-  n_new_deaths ~ binomial_lpmf(n_at_risk, p);
+  n_new_deaths ~ binomial(n_at_risk, p);
 
   // priors (all improper uniform, so not defined here)
 
