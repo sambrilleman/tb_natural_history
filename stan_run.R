@@ -1,15 +1,16 @@
 
-smear <- "positive"
-dat   <- analysis$all_data[analysis$all_data$smear_status == smear,]
-
+smear  <- "positive"
+dat    <- analysis$all_data[analysis$all_data$smear_status == smear,]
+dat$id <- as.integer(factor(dat$cohort_id))
+  
 standat <- list(
   N            = nrow(dat),
-  K            = max(dat$cohort_id),
+  K            = max(dat$id),
   n_at_risk    = dat$n_at_risk,
   n_new_deaths = dat$n_new_deaths,
   t_start      = dat$t_start,
   delta_t      = dat$delta_t,
-  cohort_id    = dat$cohort_id,
+  cohort_id    = dat$id,
   mu           = analysis$mu
 )
 
