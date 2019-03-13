@@ -44,9 +44,9 @@ data {
   int<lower=0> n_new_deaths[N];
   vector<lower=0>[N] t_start;
   vector<lower=0>[N] delta_t;
-	
-	// known constant for intensity rate in Markov model (R -> D)
-	real<lower=0> mu;
+
+  // known constant for intensity rate in Markov model (R -> D)
+  real<lower=0> mu;
 
 }
 

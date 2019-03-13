@@ -48,10 +48,10 @@ data {
 
   // cohort indexing
   int<lower=1,upper=K> cohort_id[N];
-	
-	// known constant for intensity rate in Markov model (R -> D)
-	real<lower=0> mu;
-	
+
+  // known constant for intensity rate in Markov model (R -> D)
+  real<lower=0> mu;
+
 }
 
 parameters {
